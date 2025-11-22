@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user.users'
 
-CSRF_TRUSTED_ORIGINS='event-booker1-production.up.railway.app'
+CSRF_TRUSTED_ORIGINS='https://event-booker1-production.up.railway.app'
 
 #smtp_server='smtp.gmail.com'
 #port=587     'The host is the address of a computer on a network, while the port is like a specific doorway on that computer that a program uses to send and receive data.' (so i guess its the bit you connect to) port 587 is the port (like ship port) that sends emails to the stmp server and then to the user maybe)
