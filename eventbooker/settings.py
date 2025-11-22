@@ -140,10 +140,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user.users'
 
-smtp_server='smtp.gmail.com'
-port=587     #'The host is the address of a computer on a network, while the port is like a specific doorway on that computer that a program uses to send and receive data.' (so i guess its the bit you connect to) port 587 is the port (like ship port) that sends emails to the stmp server and then to the user maybe)
-server=smtplib.SMTP(smtp_server,port)
-server.starttls()
-sender_email="tnewnham94@gmail.com" #os.environ is a way to access environment variables which are described as global variables that live outside your code in your syste, or other stuff. set password in the terminal and then imported the environment variable so its not hardcoded la and stolen
-password=os.environ.get("password")
+#smtp_server='smtp.gmail.com'
+#port=587     'The host is the address of a computer on a network, while the port is like a specific doorway on that computer that a program uses to send and receive data.' (so i guess its the bit you connect to) port 587 is the port (like ship port) that sends emails to the stmp server and then to the user maybe)
+#server=smtplib.SMTP(smtp_server,port)
+#server.starttls()
+#sender_email="tnewnham94@gmail.com" #os.environ is a way to access environment variables which are described as global variables that live outside your code in your syste, or other stuff. set password in the terminal and then imported the environment variable so its not hardcoded la and stolen
+#password=os.environ.get("password")
 
