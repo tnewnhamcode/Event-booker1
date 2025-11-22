@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("Secret")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["tom-n-event-booker1.onrender.com"]
+ALLOWED_HOSTS = ["event-booker1-production.up.railway.app"]
 
 
 # Application definition
