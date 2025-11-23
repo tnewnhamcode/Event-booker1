@@ -141,7 +141,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'user.users'
 
 CSRF_TRUSTED_ORIGINS=[
-    "https://event-booker1-production.up.railway.app"
+    "https://event-booker1-production.up.railway.app",
+    "https://*.up.railway.app"
+]
+
 ]
 
 #smtp_server='smtp.gmail.com'
