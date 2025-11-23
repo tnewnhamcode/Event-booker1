@@ -16,7 +16,7 @@ class CustomUserCreationForm(UserCreationForm):
         fields = UserCreationForm.Meta.fields + ('Email',) + ('Mobile',) 
 
 
-    def clean_mobile(self):
+    def clean_Mobile(self):
         mobile = str(self.cleaned_data.get('Mobile'))  # Convert to string
         if len(mobile) != 11:
             raise forms.ValidationError("The mobile number given should be 11 numbers long.")
