@@ -55,11 +55,7 @@ def payscreen(request):
             purchase_history_instance=Purchase_history_class(purchaser=request.user, purchase_history=thing[1])
             purchase_history_instance.save()
             messages.success(request, 'Payment successful! (not for real...) Check your email for ticket(s)! Check your profile page, linked just below Logout at the top right of the Homepage, for purchase confirmation.') #send more if more ordered...
-            if thing[1]=='Funtime Disco':
-                file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Funtime_Disco_Ticket.pdf')
-                email_message = EmailMessage('Funtime Disco reciept','Thank you for purchasing! Attached is your e-ticket for Funtime Disco. Please do not show it to any real bouncer. Enjoy!', to=[request.user.email])
-                email_message.attach_file(file_path) 
-                email_message.send() 
+         
                 
             return redirect('successcreen')
         else:
