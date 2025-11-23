@@ -45,11 +45,7 @@ def payscreen(request):
             payment_info = form.save(commit=False)  #using a form.save to a model creates an instance of the model. form.save is a method belonging to forms. and thats what it does
             payment_info.payer=request.user
             payment_info.save()
-            if thingy[1]=='Funtime Disco':
-                file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Funtime_Disco_Ticket.pdf')    #finds the current set directory of this file (coz it may not actually be what you think)
-                email_message = EmailMessage('Funtime Disco reciept','Thank you for purchasing! Attached is your e-ticket for Funtime Disco. Please do not show it to any real bouncer. Enjoy!', to=[request.user.email])
-                email_message.attach_file(file_path) 
-                email_message.send()        #this and the one above are instance methods on the class EmailMessage. So it requires to first create an instance (such as email_message)
+                 #this and the one above are instance methods on the class EmailMessage. So it requires to first create an instance (such as email_message)
                 
             
             messages.success(request, 'Payment successful! (not for real...) Check your profile page (top right of home) for purchase confirmation')
