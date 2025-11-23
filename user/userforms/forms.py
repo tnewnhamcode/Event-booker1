@@ -7,6 +7,7 @@ from django.conf import settings
 
 
 class CustomUserCreationForm(UserCreationForm):
+    {% csrf_token %}
     Email = forms.EmailField(max_length=40, help_text="Required. Add a valid email address.")
     Mobile = forms.IntegerField(help_text="Required. Add a valid Mobile number.")
 
